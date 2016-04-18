@@ -23,4 +23,4 @@ Hardware: 16G U Disk<p>
 *PS: Go into 'tmp' folder, copy 'deploy.sh' here and run it.*<p>
 
 ##### Notice
-*I'm not very clear about Grub program's behavior, so when everything's done, and I put the U disk into a PC, it will halt at the beginning, base on the screen's output, I edited some files under the U disk's '/boot/grub/' folder, finally it worked.*<p>
+*I'm not very clear about Grub program's behavior, so when everything's done, and I put the U disk into a PC, it will halt at the beginning, base on the screen's output, I edited some files under the U disk's '/boot/grub/' folder (like grub.cfg), finally it worked.*<p>
