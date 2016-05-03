@@ -4,6 +4,10 @@
 # create rootfs folder
 #
 mkdir rootfs
+
+#
+# PS: /dev/sda device must be ext4 format!
+#
 mount /dev/sda1 rootfs
 cd rootfs
 rm -rf ./*
