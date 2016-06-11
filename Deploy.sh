@@ -25,7 +25,7 @@ echo "wisnuc"                        > etc/hostname
 echo "127.0.0.1 localhost"           > etc/hosts
 echo "127.0.1.1 wisnuc"              > etc/hosts
 echo "[Match]"                       > etc/systemd/network/wired.network
-echo "Name=enp0s3"                  >> etc/systemd/network/wired.network
+echo "Name=en*"                     >> etc/systemd/network/wired.network
 echo "[Network]"                    >> etc/systemd/network/wired.network
 echo "DHCP=ipv4"                    >> etc/systemd/network/wired.network
 echo "/dev/sdb1 / ext4 defaults 1 1" > etc/fstab
@@ -52,8 +52,7 @@ mount -t proc none proc
 mount -t sysfs none sys
 
 chroot . apt-get update
-chroot . apt-get -y install linux-{headers,image}-generic net-tools iproute2 iputils-ping sudo vim tree curl wget openssh-server
-
+chroot . apt-get -y install linux-{headers,image}-generic net-tools iproute2 iputils-ping sudo nano tree curl wget openssh-server
 
 chroot . grub-install /dev/sdb
 chroot . chmod a-x /etc/grub.d/30_os-prober
