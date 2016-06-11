@@ -19,7 +19,7 @@ rm -rf ./*
 tar xf ../ubuntu-base-16.04-core-amd64.tar.gz
 
 #
-# set up hostname, hosts, eth0 (enp0s3 now), and fstab
+# set up hostname, hosts, eth0 (enp0s2~5 now), and fstab
 #
 echo "wisnuc"                        > etc/hostname
 echo "127.0.0.1 localhost"           > etc/hosts
