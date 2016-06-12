@@ -1,6 +1,13 @@
 #!/bin/bash
 
 #
+# deal with u stick
+#
+# fdisk /dev/sdb 
+# partprobe
+# mkfs.ext4 /dev/sdb1
+
+#
 # create rootfs folder
 #
 mkdir rootfs
