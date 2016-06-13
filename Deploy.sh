@@ -54,6 +54,7 @@ echo "deb http://archive.ubuntu.com/ubuntu/ xenial-security multiverse" >> etc/a
 #
 echo "nameserver 208.67.222.222"   > etc/resolv.conf
 
+# it will only work when 'mount /dev/sdb1 rootfs' has already donet!
 mount -t devtmpfs none dev
 mount -t proc none proc
 mount -t sysfs none sys
@@ -88,9 +89,10 @@ chroot . systemctl enable systemd-resolved
 chroot . rm -rf /etc/resolv.conf
 chroot . ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
-umount $pwd/sys 
-umount $pwd/proc
-umount $pwd/dev
+# under 'rootfs' folder
+umount sys 
+umount proc
+umount dev
 
 cd ..
-umount $pwd/rootfs
+umount rootfs
