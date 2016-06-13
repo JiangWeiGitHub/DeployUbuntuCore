@@ -88,9 +88,9 @@ chroot . systemctl enable systemd-resolved
 chroot . rm -rf /etc/resolv.conf
 chroot . ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
-umount sys 
-umount proc
-umount dev
+umount $pwd/sys 
+umount $pwd/proc
+umount $pwd/dev
 
 cd ..
-umount rootfs
+umount $pwd/rootfs
