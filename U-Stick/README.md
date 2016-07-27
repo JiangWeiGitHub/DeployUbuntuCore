@@ -59,12 +59,12 @@ $ sudo nano syslinux.cfg
 This configuration file will look something like this:
 PROMPT 0
 TIMEOUT 1
-DEFAULT core
+DEFAULT wisnuc
 
-LABEL core
-        LINUX $vmlinuz
-        APPEND root=/dev/sda2 ro
-        INITRD $initrd
+LABEL wisnuc
+        LINUX $vmlinuz_name
+        APPEND root=UUID=??? rw
+        INITRD $initrd_name
   Be sure to replace $vmlinuz with the name of your kernel and $initrd with the name of your initrd. E.g.:
 11. Reboot
 Shut down your target system and remove the CD (or other temporary boot media). Start your target system and enjoy Ubuntu Core!
